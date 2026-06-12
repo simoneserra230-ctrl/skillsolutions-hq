@@ -61,8 +61,11 @@ clienti con fondi pubblici. Questo è il vantaggio competitivo non copiabile.
 6. **Nessun deploy completato end-to-end**: Render a metà, Vercel mai partito,
    nessuna URL di produzione collaudata.
 7. **Stack frammentato**: FastAPI+vanilla JS oggi vs target Next.js dichiarato;
-   2 provider DB (Neon + Supabase); repo GitHub solo per `formazione`.
-   BAD360, BarmanMatch, BA.IA non versionati su remoto = rischio perdita totale.
+   2 provider DB (Neon + Supabase).
+   ~~Repo non versionate~~ → CORRETTO 12/6: BA.IA (`baia-saas`) e BAD360
+   (`BAD360_SAAS_B2C`) erano GIÀ su GitHub; il rischio reale era il lavoro non
+   committato — RISOLTO col consolidamento (vedi PIANO_FINALIZZAZIONE.md).
+   Restano da creare le repo remote: ssformazione, barmanmatch, skillsolutions-hq.
 8. **Sicurezza**: `recovery-codes.txt` e `BA.IA - SS KEY.txt` in chiaro sul
    Desktop; password SHA-256 senza salt nel backend; chiave Anthropic compromessa
    non ancora revocata (verificare!); `.env` sparsi in cartelle multiple.
