@@ -1,0 +1,28 @@
+# ── REPO HQ: traccia SOLO strategia, agenti finanza, siti statici ──────────
+# I progetti applicativi hanno repo git propri — esclusi qui:
+BA.IA.SKILLSOLUTIONS.COM/
+BAD360.SKILLSOLUTIONS.COM/
+BARMANMATCH.SKILLSOLUTIONS.COM/
+CORSI FORMAZIONE ELEARNING/
+SSFormazione/
+
+# Workspace operativo (materiali clienti, side project, 768 file agenti)
+_WORKSPACE/
+
+# ── SEGRETI — MAI nel repo ──────────────────────────────────────────────────
+recovery-codes.txt
+*KEY*.txt
+*.key
+*.pem
+.env
+.env.*
+
+# ── Junk ────────────────────────────────────────────────────────────────────
+__pycache__/
+.venv/
+node_modules/
+*.log
+*.tmp
+.DS_Store
+Thumbs.db
+desktop.ini

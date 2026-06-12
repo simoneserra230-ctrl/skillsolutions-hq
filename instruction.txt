@@ -1,0 +1,293 @@
+REPORT DI ANALISI — Corso "Formazione Generale - SSL" (LearnWorlds)
+Analisi basata sulla lezione tipo Lezione 2 – "Principi Costituzionali e Quadro Legislativo della Sicurezza sul Lavoro", che rappresenta il modello strutturale standard replicato su tutte le 12 lezioni tematiche del corso.
+
+1. STRUTTURA DEL TESTO
+Struttura complessiva di ogni lezione (unità tematica)
+Ogni lezione è composta da 4 attività distinte in sequenza obbligatoria:
+
+Ebook introduttivo (tempo lettura: 01:00)
+Video lezione (durata variabile, es. 18:36)
+Ebook principale (tempo lettura: 04:00)
+Quiz di fine lezione (1 domanda)
+
+
+EBOOK INTRODUTTIVO (01:00 — 121 parole, reading time ~40 sec.)
+Struttura interna:
+ElementoDettaglioHero sectionSfondo azzurro chiaro (#d6eaf8), "Lezione N" come label, titolo H1 centratoTesto corpo1 paragrafo introduttivo (~40 parole)Lista obiettiviElenco con icone checkmark circolari turchese, 4 vociCallout boxBanner pill azzurro pieno (#3498db), 1 frase motivazionale
+Gerarchia titoli nell'ebook introduttivo:
+[Label sopra] "Lezione N" — body text piccolo, centrato
+[H1 centrato] Titolo completo della lezione (grassetto, serif, grande)
+[Corpo]       Paragrafo introduttivo descrittivo (~40 parole)
+[Lista]       4 obiettivi con icona checkmark turchese
+[Callout]     Frase-slogan in box pill azzurro
+Non ci sono H2 o H3 nell'ebook introduttivo.
+
+EBOOK PRINCIPALE (04:00 — ~1894 parole, reading time ~10:31)
+Struttura interna — 6 sezioni:
+N.Titolo sezione (H2)Contenuto0Hero section"Lettura testo della lezione N" + istruzione di lettura1Titolo lezione (H2 primo)2-3 paragrafi introduttivi (~200 parole)2Fondamenti tematici (es. "Fondamenti Costituzionali...")3-4 paragrafi (~300 parole)3Struttura normativa (es. "Struttura e Caratteristiche del D.Lgs. 81/2008")1 paragrafo + 2 elenchi puntati (~300 parole)4Dati e contesto (es. "Stato Attuale della Sicurezza: Dati e Prevenzione")3 paragrafi con dati statistici (~200 parole)5Obblighi/figure (es. "Obblighi, Diritti e Responsabilità: Chi Fa Cosa")3-4 paragrafi + 1 elenco puntato con grassetto (~300 parole)6Sintesi e Prossimi Passi (sezione finale fissa)3 paragrafi + 5 voci checkmark (~150 parole)
+Gerarchia titoli nell'ebook principale:
+[Hero — sfondo azzurro]
+  [Label] "Lettura testo della lezione N"
+  [H1 centrato bold serif] Frase istruzione di lettura
+
+[Corpo — sfondo bianco]
+  [H2] — TitoloSezione1  ← preceduto da trattino "—" nero come separatore visivo
+  [Paragrafi]
+  
+  [H2] — TitoloSezione2
+  [Paragrafi]
+  [Lista puntata •]
+  
+  [H2] — TitoloSezione3
+  ...
+  
+  [Banner pill azzurro] "Sintesi e Prossimi Passi"  ← NON è un H, è un componente grafico
+  [Paragrafi]
+  [Lista checkmark turchese]
+Uso del grassetto: Le voci dell'elenco nella sezione "Chi fa cosa" iniziano con nomefigura: in grassetto (es. Datore di Lavoro:, Lavoratore:). I riferimenti normativi (D.Lgs. 81/2008, art. 32 ecc.) NON sono in grassetto, sono scritti nel corpo del testo.
+Elenchi: Ci sono 2 tipologie:
+
+Elenco puntato standard • (nero, corpo testo): usato per caratteristiche normative, titoli di decreto, elenchi descrittivi
+Elenco con icona checkmark circolare turchese: usato SOLO negli obiettivi (ebook intro) e nella sezione "Sintesi e Prossimi Passi" (ebook principale)
+
+
+2. QUANTITÀ DI CONTENUTO
+MetricaEbook introduttivoEbook principaleParole totali~121~1894Reading time indicato01:0004:00Parole per sezione (media)n/a (1 sola sezione)~270 parole/sezioneLunghezza titolo lezione7–12 parole(idem, stesso titolo)Voci per elenco (media)4 voci (obiettivi)4–5 voci per elencoElenchi totali12–3Callout/box speciali1 (pill motivazionale)1 (banner "Sintesi") + 1 (pill motivazionale)
+Non ci sono esempi o casi pratici espliciti come sezioni a sé. Il testo è descrittivo-normativo, con dati statistici integrati nel corpo (es. "641.000 infortuni lavorativi — INAIL 2024").
+
+3. POSIZIONE DEGLI ELEMENTI
+Sequenza del percorso studente (navigazione sequenziale obbligatoria):
+[1] EBOOK INTRO (01:00)
+      ↓ deve completare
+[2] VIDEO (durata variabile: 8–19 min.)
+      ↓ deve guardare
+[3] EBOOK PRINCIPALE (04:00)
+      ↓ deve completare
+[4] QUIZ (1 domanda)
+      ↓ deve passare (100%)
+[→] LEZIONE SUCCESSIVA
+Il video è posizionato tra i due ebook — quindi nel mezzo della sequenza didattica.
+Ogni attività ha una durata stimata visibile nell'indice (es. 01:00, 18:36, 04:00).
+Immagini: Solo nell'ebook introduttivo, dove appare il logo del corso "AI Learning" (cerchio con lettera "A" in blu scuro e "i" turchese) posizionato a destra del testo/obiettivi, in layout a 2 colonne. Nell'ebook principale NON ci sono immagini.
+Barra di avanzamento: Visibile nella sidebar sinistra del course player, mostra la percentuale di completamento del corso (es. "20%"). Ogni attività completata aggiunge una spunta ✓ blu nell'indice.
+
+4. STILE E GRAFICA
+Tipografia:
+
+Titolo H1 hero: Font serif (stile "Playfair Display" o simile), grassetto, grande (~48–60px), colore nero/quasi nero su sfondo azzurro
+Label "Lezione N": Body text piccolo, non-bold, centrato sopra l'H1
+Titoli H2 sezioni corpo: Font serif, bold, nero, preceduti dal trattino "—" con uno spazio fisso come separatore visivo
+Corpo testo: Font sans-serif leggibile, corpo standard ~16–18px
+Callout pill "Sintesi e Prossimi Passi": Font sans-serif, bianco, bold, su sfondo pill/pulsante arrotondato azzurro #3498db
+
+Separatori di sezione H2: Il titolo è preceduto da "—" (tratto em-dash lungo) in nero come elemento decorativo, non da linee orizzontali.
+Box colorati / callout:
+
+Callout motivazionale (ebook intro): Pill arrotondata azzurra piena, icona lampadina bianca sulla sinistra, testo bianco bold centrato. 1 frase breve.
+Banner "Sintesi e Prossimi Passi" (ebook principale): Pill arrotondata azzurra piena, testo bianco bold centrato. Larghezza circa 70% del contenuto.
+
+Riferimenti normativi: Scritti nel corpo del testo in forma estesa (es. "Decreto Legislativo 81/2008", "art. 32 della Costituzione Italiana", "D.Lgs. 106/2009"). NON usano formattazione speciale, NON sono in grassetto né in box separati.
+Tabelle: Non presenti.
+Palette colori dominante:
+
+Azzurro chiaro hero: #d6eaf8 o simile
+Azzurro pieno bottoni/callout: #3498db
+Checkmark icone: turchese brillante
+Testo: nero/grigio scuro
+Sfondo corpo: bianco
+
+
+5. VIDEO
+Sì, c'è un video per ogni lezione tematica.
+
+Posizione: tra l'ebook intro (01:00) e l'ebook principale (04:00) — cioè nel mezzo
+Durata: variabile per lezione (da ~4:50 a ~19:11 minuti)
+Testo prima del video: Sì — tutto il testo dell'ebook intro (121 parole, obiettivi, callout)
+Testo dopo il video: Sì — tutto il testo dell'ebook principale (1894 parole, 5+ sezioni H2)
+Sottotitoli/trascrizione visibile: Non verificabile dall'editor, presumibilmente assenti o non visibili nell'anteprima
+Alcune lezioni hanno 2 video (es. lezione 6, 7) con durate separate
+
+
+6. QUIZ
+
+Domande per quiz: 1 sola domanda (indicato nell'outline come "1 domande")
+Tipo domanda: Multiple choice (risposta singola, radio button)
+Risposte per domanda: 4 opzioni
+Risposta corretta: 1 sola risposta corretta (con indicatore ✓ verde nell'editor)
+Punteggio per risposta corretta: +1 punto
+Spiegazione/feedback dopo risposta: Il sistema ha il campo Feedback avanzato attivato (sì per ogni opzione), ma i campi di testo risultano vuoti — non c'è spiegazione testuale configurata
+Posizione: Su pagina/attività separata — è la 4ª attività della lezione, dopo l'ebook principale
+Punteggio minimo per passare: 100% (lo studente deve rispondere correttamente)
+Limite di tempo: Nessuno ("No time")
+Tentativi: Illimitati ("Unlimited attempts")
+Intestazione del quiz: Mostra il titolo della lezione come header (es. "Struttura e Ruoli del D.Lgs. 81/2008: Figure Chiave e Responsabilità")
+
+
+7. NAVIGAZIONE E UX
+
+Navigazione tra lezioni: Pulsanti "Torna alla Precedente" e "Vai alla Successiva" fissi in basso al player
+Navigazione obbligatoria: Le attività sono bloccate in sequenza (occorre completare una per sbloccare la successiva — messaggio "Per continuare devi completare l'unità...")
+Indice del corso: Sidebar sinistra sempre visibile con tutte le 14 sezioni del corso espandibili, con durata di ogni attività e spunta ✓ per le completate
+Indicatore progresso corso: Barra progress + percentuale in cima alla sidebar (es. "20%")
+Durata indicata nell'indice: Sì, ogni attività mostra la durata (01:00, 18:36, 04:00 ecc.)
+Totale lezioni del corso: 14 sezioni, di cui 12 lezioni tematiche + 1 materiale didattico + 1 certificato
+Certificato finale: Disponibile al completamento del percorso
+
+
+
+TEMPLATE DI REPLICA
+Prompt copia-incolla pronto all'uso per generare nuove lezioni
+
+Sei un instructional designer esperto. Devi creare il contenuto testuale per una lezione 
+e-learning su LearnWorlds per un corso di formazione professionale in italiano.
+
+La lezione si chiama: "[NOME DELLA LEZIONE]"
+Il numero della lezione è: [N]
+L'argomento principale è: [DESCRIZIONE ARGOMENTO]
+La normativa di riferimento principale è: [es. D.Lgs. 81/2008, art. X]
+
+Genera ESATTAMENTE 2 documenti separati:
+
+===========================================================
+DOCUMENTO 1: EBOOK INTRODUTTIVO (target: 120–130 parole totali)
+===========================================================
+
+Struttura obbligatoria:
+
+[HERO SECTION — visivamente su sfondo azzurro chiaro, testo centrato]
+Label sopra: "Lezione [N]"
+Titolo H1: [NOME DELLA LEZIONE] — grassetto, serif, centrato
+
+[SEZIONE CORPO — layout a 2 colonne: testo sinistra, immagine logo destra]
+
+PARAGRAFO INTRODUTTIVO (40–50 parole):
+Una frase che inizia con "Questa lezione ti fornirà..." o "Questo modulo ti guiderà..."
+seguita da una descrizione del contenuto e dell'ambito normativo trattato.
+Tono: formale ma accessibile, seconda persona singolare ("ti", "tu").
+
+LISTA OBIETTIVI (4 voci con icona checkmark turchese):
+- [Verbo infinito all'imperativo/infinito] + oggetto specifico del modulo
+- [Verbo infinito] + oggetto
+- [Verbo infinito] + oggetto con riferimento normativo (es. "D.Lgs. 81/2008")
+- [Verbo infinito] + oggetto
+
+CALLOUT BOX MOTIVAZIONALE (1 frase, ~20–25 parole):
+Frase motivazionale sulla sicurezza/prevenzione. Stile: assertivo, con riferimento 
+al valore sociale e strategico della sicurezza. NON usare punti elenco.
+Esempio di tono: "Prevenire gli infortuni non rappresenta soltanto un dovere morale 
+e legale, ma costituisce anche un investimento strategico..."
+
+===========================================================
+DOCUMENTO 2: EBOOK PRINCIPALE (target: 1800–2000 parole totali)
+===========================================================
+
+Struttura obbligatoria nell'ordine esatto seguente:
+
+[HERO SECTION — visivamente su sfondo azzurro chiaro, testo centrato]
+Label sopra: "Lettura testo della lezione [N]"
+Titolo H1: "Leggi attentamente elaborando le informazioni anche in riferimento 
+al contesto lavorativo in cui ti trovi attualmente."
+(Questo titolo è FISSO uguale per tutte le lezioni — non cambiarlo)
+
+[SEZIONE 1 — H2] — [NOME DELLA LEZIONE]  ← stesso titolo del corso lezione
+(~200–220 parole, 2 paragrafi)
+Paragrafo 1 (~100 parole): Definizione e inquadramento generale dell'argomento, 
+con menzione della norma principale e delle figure coinvolte.
+Paragrafo 2 (~100 parole): Approfondimento sul quadro normativo e sugli aggiornamenti 
+recenti (Accordo Stato-Regioni 2025, leggi recenti se pertinenti).
+
+[SEZIONE 2 — H2] — [Titolo tematico specifico: es. "Fondamenti di X"]  
+(~280–320 parole, 3–4 paragrafi)
+Sviluppo del primo nucleo concettuale della lezione.
+Paragrafo 1: Base teorica/normativa (riferimento costituzionale o di principio).
+Paragrafo 2: Applicazione pratica del principio nel contesto lavorativo.
+Paragrafo 3: Evoluzione storica o contestualizzazione normativa.
+Paragrafo 4 (opzionale): Aggiornamento normativo recente.
+
+[SEZIONE 3 — H2] — [Titolo strutturale: es. "Struttura e Caratteristiche di X"]
+(~300–350 parole, 1 paragrafo + 1 elenco puntato • + 2 paragrafi + 1 elenco puntato •)
+Paragrafo iniziale (~80 parole): Descrizione strutturale dell'istituto/norma.
+ELENCO PUNTATO • (4 voci): Caratteristiche principali in forma sintetica.
+Paragrafo (~60 parole): Ambito di applicazione.
+Paragrafo (~60 parole): Obiettivi principali.
+ELENCO PUNTATO • (4–6 voci): Elementi specifici (es. titoli, articoli, categorie).
+Paragrafi finali (~80 parole): Aggiornamenti normativi recenti e loro impatto.
+
+[SEZIONE 4 — H2] — [Titolo con dati: es. "Stato Attuale di X: Dati e Prevenzione"]
+(~240–280 parole, 3 paragrafi)
+Paragrafo 1 (~100 parole): Dati statistici attuali (citare fonte: INAIL 2024, 
+EU-OSHA 2023, o simili) con numeri concreti su infortuni, decessi, costi.
+Paragrafo 2 (~80 parole): Impatto economico e sociale degli infortuni/patologie.
+Paragrafo 3 (~60 parole): Importanza della prevenzione come risposta ai dati.
+
+[SEZIONE 5 — H2] — [Titolo ruoli: es. "Obblighi, Diritti e Responsabilità: Chi Fa Cosa"]
+(~320–360 parole, 3 paragrafi + 1 elenco puntato • con grassetto + 2 paragrafi)
+Paragrafo 1 (~80 parole): Introduzione alla divisione di ruoli e responsabilità.
+Paragrafo 2 (~80 parole): Responsabilità del datore di lavoro e figure dirigenziali.
+Paragrafo 3 (~60 parole): Diritti e doveri dei lavoratori. Figure specialistiche (RLS, RSPP, MC).
+Testo ponte (~30 parole): "Di seguito sono riportati esempi pratici..."
+ELENCO PUNTATO • (4 voci con grassetto iniziale):
+- **[Nome figura]:** Descrizione dell'obbligo principale in 1-2 frasi.
+- **[Nome figura]:** ...
+- **[Nome figura]:** ...
+- **[Nome figura]:** ...
+Paragrafo (~60 parole): Organismi di vigilanza (ASL, INAIL, Ispettorato del Lavoro, ecc.).
+Paragrafo (~50 parole): Conclusione sul valore del rispetto normativo.
+
+[SEZIONE FINALE — BANNER GRAFICO AZZURRO]
+BANNER PILL AZZURRO con testo centrato bianco bold: "Sintesi e Prossimi Passi"
+(~150–170 parole, 3 paragrafi + 1 lista checkmark turchese)
+Paragrafo 1 (~60 parole): Riepilogo dei punti chiave trattati nella lezione. 
+Usare "In questa lezione abbiamo..." o "Abbiamo esplorato..."
+Paragrafo 2 (~50 parole): Cosa lo studente sa ora fare o riconoscere (competenze acquisite).
+Paragrafo 3 (~40 parole): Invito a mettere in pratica quanto appreso.
+LISTA CON ICONA CHECKMARK TURCHESE (5 voci):
+Azioni concrete che lo studente può/deve fare nel proprio ambiente di lavoro.
+Formato: verbo imperativo + oggetto (es. "Osserva attentamente...", "Segnala prontamente...")
+
+===========================================================
+ISTRUZIONI DI STILE (valide per entrambi i documenti):
+===========================================================
+
+TONO: Formale-istituzionale ma accessibile. Seconda persona singolare. 
+Mai colloquiale. Mai troppo accademico.
+
+RIFERIMENTI NORMATIVI: Scrivere sempre in forma estesa nel corpo del testo 
+(es. "D.Lgs. 81/2008", "art. 32 della Costituzione Italiana", "Accordo Stato-Regioni 2025"). 
+NON usare grassetto per i riferimenti normativi.
+
+GRASSETTO: Usare SOLO per i nomi delle figure nelle voci di elenco della Sezione 5 
+(es. **Datore di Lavoro:**). In nessun altro punto.
+
+CORSIVO: Non usare.
+
+LUNGHEZZA PARAGRAFI: Ogni paragrafo deve essere denso e continuo, senza sottoparagrafi. 
+Tra 60 e 120 parole. Nessun elenco all'interno dei paragrafi.
+
+LINGUA: Italiano standard. Nessun anglicismo se non i termini tecnici consolidati 
+(DPI, DVR, RSPP, RLS, INAIL).
+
+DATI: Includere almeno 2-3 dati statistici con fonte nella Sezione 4.
+
+NESSUNA TABELLA. NESSUNA IMMAGINE da descrivere (le immagini sono gestite graficamente).
+
+===========================================================
+DOCUMENTO AGGIUNTIVO (opzionale): DOMANDA QUIZ
+===========================================================
+
+Genera 1 domanda a risposta multipla (4 opzioni, 1 sola corretta) che:
+- Riguardi un concetto chiave della lezione
+- Abbia un livello di difficoltà medio (non banale, non troppo tecnico)
+- Le 3 risposte errate siano plausibili ma chiaramente distinguibili dalla corretta
+- La domanda inizi con "Quale...", "Secondo...", "Qual è...", "Chi è responsabile..."
+
+Formato output:
+DOMANDA: [testo]
+A) [opzione]
+B) [opzione — CORRETTA]
+C) [opzione]
+D) [opzione]
+RISPOSTA CORRETTA: B
+
+Note tecniche per implementazione su LearnWorlds
+ElementoCome si crea su LearnWorldsHero section azzurraSezione con sfondo colore #d6eaf8, testo centratoTitolo H1 heroComponente "Heading" con font serif e dimensione grandeH2 sezioni corpoComponente "Heading" preceduto da trattino "—" digitato manualmenteCallout pill azzurroComponente "Button" non cliccabile o "Callout" con stile pill arrotondatoLista checkmark turcheseLista personalizzata con icona checkmark circolare turcheseLista puntata standardLista nativa "•" nell'editor di testoBanner "Sintesi e Prossimi Passi"Componente pill/pulsante arrotondato blu #3498db, testo bianco centratoQuizModulo Assessment, tipo Multiple Choice, pass score 100%, tentativi illimitatiSequenza bloccataDrip feed o impostazione "completamento obbligatorio" su ogni attività

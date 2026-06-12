@@ -1,0 +1,360 @@
+
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:var(--font-sans)}
+.tabs{display:flex;gap:6px;margin-bottom:20px;flex-wrap:wrap}
+.tab{padding:8px 16px;border-radius:var(--border-radius-md);border:0.5px solid var(--color-border-secondary);background:transparent;color:var(--color-text-secondary);font-size:13px;font-weight:500;cursor:pointer;transition:all .2s}
+.tab.active{background:var(--color-background-secondary);color:var(--color-text-primary);border-color:var(--color-border-primary)}
+.tab:hover:not(.active){background:var(--color-background-secondary)}
+.panel{display:none}
+.panel.active{display:block}
+.section-badge{display:inline-block;font-size:11px;font-weight:500;padding:3px 10px;border-radius:20px;margin-bottom:6px}
+.b1{background:var(--color-background-info);color:var(--color-text-info)}
+.b2{background:var(--color-background-success);color:var(--color-text-success)}
+.b3{background:var(--color-background-warning);color:var(--color-text-warning)}
+.category{margin-bottom:20px;border:0.5px solid var(--color-border-tertiary);border-radius:var(--border-radius-lg);overflow:hidden}
+.cat-header{padding:12px 16px;background:var(--color-background-secondary);display:flex;align-items:center;gap:10px;cursor:pointer;user-select:none}
+.cat-icon{width:28px;height:28px;border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:14px;flex-shrink:0}
+.cat-title{font-size:14px;font-weight:500;color:var(--color-text-primary);flex:1}
+.cat-count{font-size:12px;color:var(--color-text-secondary)}
+.arrow{font-size:10px;color:var(--color-text-tertiary);transition:transform .2s}
+.cat-body{padding:0 16px;max-height:0;overflow:hidden;transition:max-height .35s ease,padding .2s}
+.cat-body.open{max-height:1200px;padding:12px 16px}
+.item{display:flex;gap:8px;align-items:flex-start;padding:7px 0;border-bottom:0.5px solid var(--color-border-tertiary)}
+.item:last-child{border-bottom:none}
+.dot{width:6px;height:6px;border-radius:50%;margin-top:6px;flex-shrink:0}
+.d1{background:#378ADD}
+.d2{background:#1D9E75}
+.d3{background:#BA7517}
+.item-text{font-size:13px;color:var(--color-text-primary);line-height:1.5}
+.item-sub{font-size:11px;color:var(--color-text-secondary);margin-top:2px}
+.sublesson{padding:4px 0;font-size:12px;color:var(--color-text-secondary);display:flex;gap:6px}
+.sublesson::before{content:"→";flex-shrink:0;color:var(--color-text-tertiary)}
+.tag{font-size:10px;padding:2px 7px;border-radius:10px;background:var(--color-background-secondary);color:var(--color-text-secondary);border:0.5px solid var(--color-border-tertiary);white-space:nowrap}
+.tags{display:flex;flex-wrap:wrap;gap:4px;margin-top:4px}
+.summary{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:20px}
+.scard{background:var(--color-background-secondary);border-radius:var(--border-radius-md);padding:12px;text-align:center}
+.scard-n{font-size:22px;font-weight:500;color:var(--color-text-primary)}
+.scard-l{font-size:11px;color:var(--color-text-secondary);margin-top:2px}
+.cta{padding:8px 14px;border-radius:var(--border-radius-md);border:0.5px solid var(--color-border-secondary);background:transparent;color:var(--color-text-secondary);font-size:12px;cursor:pointer;transition:all .2s;margin-top:8px}
+.cta:hover{background:var(--color-background-secondary)}
+</style>
+
+<div class="tabs">
+  <button class="tab active" onclick="showTab('s1',this)">🖥 SOFTWARE & AI</button>
+  <button class="tab" onclick="showTab('s2',this)">🎓 FORMAZIONE</button>
+  <button class="tab" onclick="showTab('s3',this)">🛒 ECOMMERCE</button>
+</div>
+
+<!-- SEZIONE 1: SOFTWARE / AI -->
+<div class="panel active" id="s1">
+  <div class="summary">
+    <div class="scard"><div class="scard-n">12</div><div class="scard-l">Prodotti digitali</div></div>
+    <div class="scard"><div class="scard-n">6</div><div class="scard-l">Aree AI</div></div>
+    <div class="scard"><div class="scard-n">4</div><div class="scard-l">Tool AI consigliati</div></div>
+  </div>
+
+  <div class="category">
+    <div class="cat-header" onclick="toggle(this)">
+      <div class="cat-icon" style="background:#E6F1FB">📱</div>
+      <span class="cat-title">Menu digitale & QR Experience</span>
+      <span class="cat-count">4 prodotti</span><span class="arrow">▼</span>
+    </div>
+    <div class="cat-body open">
+      <div class="item"><div class="dot d1"></div><div class="item-text">Menu digitale animato con AI — video 15" per cocktail<div class="tags"><span class="tag">Runway ML</span><span class="tag">Midjourney</span><span class="tag">QR Code</span></div></div></div>
+      <div class="item"><div class="dot d1"></div><div class="item-text">Scheda sensoriale animata — dolce/amaro/fresco/speziato<div class="tags"><span class="tag">DALL-E</span><span class="tag">ElevenLabs</span></div></div></div>
+      <div class="item"><div class="dot d1"></div><div class="item-text">Menu stagionale auto-generato — AI rigenera ogni stagione</div></div>
+      <div class="item"><div class="dot d1"></div><div class="item-text">"Behind the Glass" — mini-doc 30" per ogni cocktail signature<div class="tags"><span class="tag">HeyGen</span><span class="tag">Suno</span></div></div></div>
+    </div>
+  </div>
+
+  <div class="category">
+    <div class="cat-header" onclick="toggle(this)">
+      <div class="cat-icon" style="background:#E6F1FB">🤖</div>
+      <span class="cat-title">Personalizzazione & Chatbot AI</span>
+      <span class="cat-count">4 prodotti</span><span class="arrow">▼</span>
+    </div>
+    <div class="cat-body open">
+      <div class="item"><div class="dot d1"></div><div class="item-text">"Mood Cocktail Advisor" — quiz 3 domande → video cocktail personalizzato</div></div>
+      <div class="item"><div class="dot d1"></div><div class="item-text">"Il Barman Invisibile" — avatar AI al banco, multilingue<div class="tags"><span class="tag">HeyGen</span><span class="tag">Claude API</span></div></div></div>
+      <div class="item"><div class="dot d1"></div><div class="item-text">Cocktail dedicato per anniversari/compleanni — video AI nominale</div></div>
+      <div class="item"><div class="dot d1"></div><div class="item-text">"Costruisci il Tuo Drink" — interfaccia interattiva con anteprima AI live</div></div>
+    </div>
+  </div>
+
+  <div class="category">
+    <div class="cat-header" onclick="toggle(this)">
+      <div class="cat-icon" style="background:#E6F1FB">🏨</div>
+      <span class="cat-title">Tour Virtuale & Storytelling del Locale</span>
+      <span class="cat-count">3 prodotti</span><span class="arrow">▼</span>
+    </div>
+    <div class="cat-body open">
+      <div class="item"><div class="dot d1"></div><div class="item-text">Tour virtuale AI 90" — per sito web, Instagram, pre-checkin hotel<div class="tags"><span class="tag">Kling AI</span><span class="tag">Sora</span></div></div></div>
+      <div class="item"><div class="dot d1"></div><div class="item-text">Tour stagionale/evento — Natale, Estate, Evento speciale</div></div>
+      <div class="item"><div class="dot d1"></div><div class="item-text">"Da Dove Viene Questo Spirits" — viaggio AI dalla distilleria al bicchiere</div></div>
+    </div>
+  </div>
+
+  <div class="category">
+    <div class="cat-header" onclick="toggle(this)">
+      <div class="cat-icon" style="background:#E6F1FB">🍹</div>
+      <span class="cat-title">Social Content & Drink Blog AI</span>
+      <span class="cat-count">5 prodotti</span><span class="arrow">▼</span>
+    </div>
+    <div class="cat-body open">
+      <div class="item"><div class="dot d1"></div><div class="item-text">Cocktail generati da prompt AI — Reels e TikTok automatizzati</div></div>
+      <div class="item"><div class="dot d1"></div><div class="item-text">"Indovina il Cocktail" — format quiz virale con descrizioni poetiche AI</div></div>
+      <div class="item"><div class="dot d1"></div><div class="item-text">Blog post automatizzati su spirits, ricette, storia della mixologia<div class="tags"><span class="tag">Claude</span><span class="tag">SEO AI</span></div></div></div>
+      <div class="item"><div class="dot d1"></div><div class="item-text">Newsletter AI settimanale — cocktail della settimana, news spirits</div></div>
+      <div class="item"><div class="dot d1"></div><div class="item-text">Pairing del Giorno — video 30" giornaliero generato da foto piatto</div></div>
+    </div>
+  </div>
+
+  <div class="category">
+    <div class="cat-header" onclick="toggle(this)">
+      <div class="cat-icon" style="background:#E6F1FB">🎓</div>
+      <span class="cat-title">Piattaforma di Formazione AI</span>
+      <span class="cat-count">5 prodotti</span><span class="arrow">▼</span>
+    </div>
+    <div class="cat-body open">
+      <div class="item"><div class="dot d1"></div><div class="item-text">Roleplay cliente AI — simulazioni barman/cliente difficile interattive</div></div>
+      <div class="item"><div class="dot d1"></div><div class="item-text">Moduli formativi video micro-learning — 2-3 min/giorno su mobile</div></div>
+      <div class="item"><div class="dot d1"></div><div class="item-text">Sistema di valutazione e certificazione digitale AI</div></div>
+      <div class="item"><div class="dot d1"></div><div class="item-text">Upselling trainer AI — scenari pratici con feedback immediato</div></div>
+      <div class="item"><div class="dot d1"></div><div class="item-text">Avatar sommelier/barman per corsi online — HeyGen + voce ElevenLabs</div></div>
+    </div>
+  </div>
+
+  <button class="cta" onclick="sendPrompt('Dimmi quali tool AI usare per realizzare ogni prodotto della sezione Software e come strutturare il workflow tecnico')">Approfondisci workflow tecnico ↗</button>
+</div>
+
+<!-- SEZIONE 2: FORMAZIONE -->
+<div class="panel" id="s2">
+  <div class="summary">
+    <div class="scard"><div class="scard-n">7</div><div class="scard-l">Corsi principali</div></div>
+    <div class="scard"><div class="scard-n">42+</div><div class="scard-l">Lezioni totali</div></div>
+    <div class="scard"><div class="scard-n">5</div><div class="scard-l">Aree tematiche</div></div>
+  </div>
+
+  <div class="category">
+    <div class="cat-header" onclick="toggle(this)">
+      <div class="cat-icon" style="background:#EAF3DE">🍸</div>
+      <span class="cat-title">Corso 1 — Bartending & Mixologia</span>
+      <span class="cat-count">8 lezioni</span><span class="arrow">▼</span>
+    </div>
+    <div class="cat-body open">
+      <div class="item"><div class="dot d2"></div><div class="item-text">L1 — Storia della mixologia: origini, epoche, icone
+        <div class="sublesson">Cocktail classici e loro evoluzione</div>
+        <div class="sublesson">I grandi bartender della storia</div>
+      </div></div>
+      <div class="item"><div class="dot d2"></div><div class="item-text">L2 — Tecniche base: shaker, stirring, muddling, straining</div></div>
+      <div class="item"><div class="dot d2"></div><div class="item-text">L3 — Spirits fondamentali: gin, rum, whisky, vodka, tequila, mezcal</div></div>
+      <div class="item"><div class="dot d2"></div><div class="item-text">L4 — Liquori, amari, vermouth e aperitivi italiani</div></div>
+      <div class="item"><div class="dot d2"></div><div class="item-text">L5 — Bilanciamento del cocktail: dolce, acido, amaro, alcolico</div></div>
+      <div class="item"><div class="dot d2"></div><div class="item-text">L6 — Guarnizioni, presentazione e visual appeal</div></div>
+      <div class="item"><div class="dot d2"></div><div class="item-text">L7 — Cocktail analcolici e low-ABV: tecniche e ingredienti</div></div>
+      <div class="item"><div class="dot d2"></div><div class="item-text">L8 — Creazione del cocktail signature: dalla idea alla ricetta finale</div></div>
+    </div>
+  </div>
+
+  <div class="category">
+    <div class="cat-header" onclick="toggle(this)">
+      <div class="cat-icon" style="background:#EAF3DE">🏠</div>
+      <span class="cat-title">Corso 2 — Home Made & Spirits Artigianali</span>
+      <span class="cat-count">7 lezioni</span><span class="arrow">▼</span>
+    </div>
+    <div class="cat-body open">
+      <div class="item"><div class="dot d2"></div><div class="item-text">L1 — Introduzione alla produzione home made: normative e sicurezza</div></div>
+      <div class="item"><div class="dot d2"></div><div class="item-text">L2 — Infusioni alcoliche: tecniche, tempi, botanici<div class="sublesson">Gin artigianale con botanici locali</div><div class="sublesson">Liquori di frutta e erbe</div></div></div>
+      <div class="item"><div class="dot d2"></div><div class="item-text">L3 — Sciroppi e cordiali: ricette base e varianti stagionali</div></div>
+      <div class="item"><div class="dot d2"></div><div class="item-text">L4 — Bitter e amari artigianali: radici, spezie, macerazione</div></div>
+      <div class="item"><div class="dot d2"></div><div class="item-text">L5 — Kombucha, kefir e fermentati per cocktail</div></div>
+      <div class="item"><div class="dot d2"></div><div class="item-text">L6 — Vermouth home made: basi, erbe, vini</div></div>
+      <div class="item"><div class="dot d2"></div><div class="item-text">L7 — Conservazione, etichettatura e confezionamento professionale</div></div>
+    </div>
+  </div>
+
+  <div class="category">
+    <div class="cat-header" onclick="toggle(this)">
+      <div class="cat-icon" style="background:#EAF3DE">🍷</div>
+      <span class="cat-title">Corso 3 — Food & Beverage Pairing</span>
+      <span class="cat-count">6 lezioni</span><span class="arrow">▼</span>
+    </div>
+    <div class="cat-body open">
+      <div class="item"><div class="dot d2"></div><div class="item-text">L1 — Principi del pairing: contrasto, complementarietà, intensità</div></div>
+      <div class="item"><div class="dot d2"></div><div class="item-text">L2 — Vino e cocktail con antipasti e stuzzichini da bar</div></div>
+      <div class="item"><div class="dot d2"></div><div class="item-text">L3 — Abbinamenti inaspettati: spirits forti e formaggi stagionati</div></div>
+      <div class="item"><div class="dot d2"></div><div class="item-text">L4 — Dessert cocktail e pairing con dolci<div class="sublesson">Cioccolato e spirits affumicati</div><div class="sublesson">Agrumi e amari</div></div></div>
+      <div class="item"><div class="dot d2"></div><div class="item-text">L5 — Territorio sardo: mirto, cannonau, bottarga — pairing locale</div></div>
+      <div class="item"><div class="dot d2"></div><div class="item-text">L6 — Costruire un menu degustazione cocktail-food completo</div></div>
+    </div>
+  </div>
+
+  <div class="category">
+    <div class="cat-header" onclick="toggle(this)">
+      <div class="cat-icon" style="background:#EAF3DE">🤝</div>
+      <span class="cat-title">Corso 4 — Galateo del Bar e Ospitalità</span>
+      <span class="cat-count">7 lezioni</span><span class="arrow">▼</span>
+    </div>
+    <div class="cat-body open">
+      <div class="item"><div class="dot d2"></div><div class="item-text">L1 — Il galateo del bartender: postura, linguaggio, dress code</div></div>
+      <div class="item"><div class="dot d2"></div><div class="item-text">L2 — Accoglienza e gestione del cliente: dal saluto al commiato</div></div>
+      <div class="item"><div class="dot d2"></div><div class="item-text">L3 — Comunicazione non verbale dietro al bancone</div></div>
+      <div class="item"><div class="dot d2"></div><div class="item-text">L4 — Gestione dei clienti difficili: reclami, rifiuti, situazioni critiche</div></div>
+      <div class="item"><div class="dot d2"></div><div class="item-text">L5 — Il galateo del servizio: modalità, tempi, priorità</div></div>
+      <div class="item"><div class="dot d2"></div><div class="item-text">L6 — Galateo digitale: rispondere a recensioni, gestire i social del locale</div></div>
+      <div class="item"><div class="dot d2"></div><div class="item-text">L7 — Cultura dell'ospitalità: differenze culturali, clienti internazionali</div></div>
+    </div>
+  </div>
+
+  <div class="category">
+    <div class="cat-header" onclick="toggle(this)">
+      <div class="cat-icon" style="background:#EAF3DE">💼</div>
+      <span class="cat-title">Corso 5 — Soft Skills & Vendita al Banco</span>
+      <span class="cat-count">6 lezioni</span><span class="arrow">▼</span>
+    </div>
+    <div class="cat-body open">
+      <div class="item"><div class="dot d2"></div><div class="item-text">L1 — Storytelling del cocktail: come raccontare un drink in 30 secondi</div></div>
+      <div class="item"><div class="dot d2"></div><div class="item-text">L2 — Tecniche di upselling naturale e non invasivo</div></div>
+      <div class="item"><div class="dot d2"></div><div class="item-text">L3 — Cross-selling cibo-cocktail: suggerire abbinamenti con fluidità</div></div>
+      <div class="item"><div class="dot d2"></div><div class="item-text">L4 — Gestione dello stress nei momenti di picco</div></div>
+      <div class="item"><div class="dot d2"></div><div class="item-text">L5 — Fidelizzazione del cliente abituale: memoria, personalizzazione</div></div>
+      <div class="item"><div class="dot d2"></div><div class="item-text">L6 — Roleplay con AI: simulazioni pratiche di servizio</div></div>
+    </div>
+  </div>
+
+  <div class="category">
+    <div class="cat-header" onclick="toggle(this)">
+      <div class="cat-icon" style="background:#EAF3DE">🎬</div>
+      <span class="cat-title">Corso 6 — Drink Blog & Content Creation</span>
+      <span class="cat-count">5 lezioni</span><span class="arrow">▼</span>
+    </div>
+    <div class="cat-body open">
+      <div class="item"><div class="dot d2"></div><div class="item-text">L1 — Come strutturare un drink blog: nicchia, pubblico, voce editoriale</div></div>
+      <div class="item"><div class="dot d2"></div><div class="item-text">L2 — Fotografia cocktail con smartphone: luci, angoli, styling</div></div>
+      <div class="item"><div class="dot d2"></div><div class="item-text">L3 — Reels e TikTok per bartender: format, hook, editing veloce</div></div>
+      <div class="item"><div class="dot d2"></div><div class="item-text">L4 — SEO per blog di settore: parole chiave, struttura articoli</div></div>
+      <div class="item"><div class="dot d2"></div><div class="item-text">L5 — Monetizzare il blog: affiliazioni spirits, sponsorship, corsi</div></div>
+    </div>
+  </div>
+
+  <div class="category">
+    <div class="cat-header" onclick="toggle(this)">
+      <div class="cat-icon" style="background:#EAF3DE">🛠</div>
+      <span class="cat-title">Corso 7 — Bar Tools: Conoscenza & Utilizzo</span>
+      <span class="cat-count">4 lezioni</span><span class="arrow">▼</span>
+    </div>
+    <div class="cat-body open">
+      <div class="item"><div class="dot d2"></div><div class="item-text">L1 — Anatomia del bar: ogni tool, il suo nome e la sua funzione</div></div>
+      <div class="item"><div class="dot d2"></div><div class="item-text">L2 — Manutenzione e cura degli strumenti professionali</div></div>
+      <div class="item"><div class="dot d2"></div><div class="item-text">L3 — Tools innovativi: centrifughe, rotovap, sifoni CO2, bilance di precisione</div></div>
+      <div class="item"><div class="dot d2"></div><div class="item-text">L4 — Stampa 3D applicata al bar: cosa si può personalizzare e produrre</div></div>
+    </div>
+  </div>
+
+  <button class="cta" onclick="sendPrompt('Come strutturare la piattaforma di e-learning per i corsi di bartending? Quali formati usare, LMS, prezzi e strategia di lancio?')">Strategia lancio corsi ↗</button>
+</div>
+
+<!-- SEZIONE 3: ECOMMERCE -->
+<div class="panel" id="s3">
+  <div class="summary">
+    <div class="scard"><div class="scard-n">3</div><div class="scard-l">Canali di vendita</div></div>
+    <div class="scard"><div class="scard-n">5</div><div class="scard-l">Categorie prodotti</div></div>
+    <div class="scard"><div class="scard-n">4</div><div class="scard-l">Workflow chiave</div></div>
+  </div>
+
+  <div class="category">
+    <div class="cat-header" onclick="toggle(this)">
+      <div class="cat-icon" style="background:#FAEEDA">🚚</div>
+      <span class="cat-title">Dropshipping — Bar Tools Professionali</span>
+      <span class="cat-count">Categoria 1</span><span class="arrow">▼</span>
+    </div>
+    <div class="cat-body open">
+      <div class="item"><div class="dot d3"></div><div class="item-text">Prodotti: shaker, jigger, barspoon, strainer, muddler, mixing glass
+        <div class="sublesson">Linea entry-level per home bartender</div>
+        <div class="sublesson">Linea pro per professionisti</div>
+      </div></div>
+      <div class="item"><div class="dot d3"></div><div class="item-text">Fornitori: Alibaba/AliExpress, Faire, Barfly, American Bar Supply<div class="tags"><span class="tag">No stock fisico</span><span class="tag">Spedizione diretta</span></div></div></div>
+      <div class="item"><div class="dot d3"></div><div class="item-text">Piattaforma: Shopify + DSers o AutoDS per gestione ordini automatica</div></div>
+      <div class="item"><div class="dot d3"></div><div class="item-text">Workflow ordine: cliente ordina → sistema invia a fornitore → spedizione diretta → tracking automatico</div></div>
+      <div class="item"><div class="dot d3"></div><div class="item-text">Margine target: 30-50% su prodotti selezionati, focus su brand awareness</div></div>
+    </div>
+  </div>
+
+  <div class="category">
+    <div class="cat-header" onclick="toggle(this)">
+      <div class="cat-icon" style="background:#FAEEDA">🖨</div>
+      <span class="cat-title">Stampa 3D — Tools Personalizzati & Custom</span>
+      <span class="cat-count">Categoria 2</span><span class="arrow">▼</span>
+    </div>
+    <div class="cat-body open">
+      <div class="item"><div class="dot d3"></div><div class="item-text">Prodotti stampabili: jigger personalizzati, supporti bottiglie, ice molds, segnacarte cocktail, display menu 3D<div class="tags"><span class="tag">Alta marginalità</span><span class="tag">Differenziante</span></div></div></div>
+      <div class="item"><div class="dot d3"></div><div class="item-text">Personalizzazione: logo locale/hotel, nome bartender, evento speciale</div></div>
+      <div class="item"><div class="dot d3"></div><div class="item-text">Materiali: PLA food-safe, PETG, resina per dettagli fini</div></div>
+      <div class="item"><div class="dot d3"></div><div class="item-text">Workflow: brief cliente → design 3D → stampa → spedizione/consegna locale<div class="sublesson">Outsourcing stampa a print farm partner se volumi alti</div></div></div>
+      <div class="item"><div class="dot d3"></div><div class="item-text">B2B: vendita a hotel, ristoranti, eventi — kit personalizzati per eventi</div></div>
+    </div>
+  </div>
+
+  <div class="category">
+    <div class="cat-header" onclick="toggle(this)">
+      <div class="cat-icon" style="background:#FAEEDA">👕</div>
+      <span class="cat-title">Merchandising — Brand & Community</span>
+      <span class="cat-count">Categoria 3</span><span class="arrow">▼</span>
+    </div>
+    <div class="cat-body open">
+      <div class="item"><div class="dot d3"></div><div class="item-text">Abbigliamento: grembiuli bartender brandizzati, t-shirt, caps, felpe<div class="tags"><span class="tag">Print-on-demand</span><span class="tag">Printful / Printify</span></div></div></div>
+      <div class="item"><div class="dot d3"></div><div class="item-text">Accessori lifestyle: tazze, portabottiglie, sottobicchieri premium, canvas cocktail art</div></div>
+      <div class="item"><div class="dot d3"></div><div class="item-text">Prodotti digitali: ricettari PDF, flashcard spirits, poster galateo del bar</div></div>
+      <div class="item"><div class="dot d3"></div><div class="item-text">Gift box: kit cocktail home curato — spirits, tools, ricetta, guida<div class="sublesson">Gift box stagionali: Natale, San Valentino, Estate</div></div></div>
+      <div class="item"><div class="dot d3"></div><div class="item-text">Collaborazioni: etichette private di infusi/sciroppi home made</div></div>
+    </div>
+  </div>
+
+  <div class="category">
+    <div class="cat-header" onclick="toggle(this)">
+      <div class="cat-icon" style="background:#FAEEDA">📦</div>
+      <span class="cat-title">Home Made & Spirits — Vendita Prodotti Propri</span>
+      <span class="cat-count">Categoria 4</span><span class="arrow">▼</span>
+    </div>
+    <div class="cat-body open">
+      <div class="item"><div class="dot d3"></div><div class="item-text">Infusi e sciroppi artigianali: lavanda, bergamotto, yuzu, fiori edibili<div class="tags"><span class="tag">Etichetta personalizzata</span><span class="tag">ATECO normativa</span></div></div></div>
+      <div class="item"><div class="dot d3"></div><div class="item-text">Bitter e amari home made: linea signature del brand</div></div>
+      <div class="item"><div class="dot d3"></div><div class="item-text">Kit DIY: "Crea il tuo gin" / "Fai il tuo amaro" — tutto il necessario in box</div></div>
+      <div class="item"><div class="dot d3"></div><div class="item-text">Abbonamento mensile: box ingredienti + ricetta del mese + video tutorial AI</div></div>
+    </div>
+  </div>
+
+  <div class="category">
+    <div class="cat-header" onclick="toggle(this)">
+      <div class="cat-icon" style="background:#FAEEDA">⚙️</div>
+      <span class="cat-title">Workflow & Metodologie Ecommerce</span>
+      <span class="cat-count">Strategia operativa</span><span class="arrow">▼</span>
+    </div>
+    <div class="cat-body open">
+      <div class="item"><div class="dot d3"></div><div class="item-text">Piattaforma consigliata: Shopify (gestione unificata dropship + prodotti propri + corsi)<div class="sublesson">Plugin: DSers, Printful, Teachable o Kajabi per corsi</div></div></div>
+      <div class="item"><div class="dot d3"></div><div class="item-text">Funnel di acquisizione: Blog/Reel gratuiti → lead magnet (ricetta PDF) → email list → offerta corso/prodotto</div></div>
+      <div class="item"><div class="dot d3"></div><div class="item-text">Email marketing: sequenza benvenuto → newsletter settimanale → lancio stagionale<div class="tags"><span class="tag">Klaviyo</span><span class="tag">Mailchimp</span></div></div></div>
+      <div class="item"><div class="dot d3"></div><div class="item-text">SEO + Content: drink blog alimenta traffico organico → conversione ecommerce</div></div>
+      <div class="item"><div class="dot d3"></div><div class="item-text">Affiliazioni: bartender/influencer che vendono i tuoi prodotti con link tracciato — 10-15% commissione</div></div>
+      <div class="item"><div class="dot d3"></div><div class="item-text">B2B: listino dedicato per hotel, ristoranti e locali — ordini minimi, fatturazione, personalizzazione</div></div>
+    </div>
+  </div>
+
+  <button class="cta" onclick="sendPrompt('Costruiscimi un piano di lancio per lecommerce partendo da zero: sequenza, budget, priorità, canali e primi 90 giorni operativi')">Piano lancio 90 giorni ↗</button>
+</div>
+
+<script>
+function showTab(id, btn) {
+  document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+  btn.classList.add('active');
+}
+function toggle(header) {
+  const body = header.nextElementSibling;
+  const arrow = header.querySelector('.arrow');
+  const open = body.classList.toggle('open');
+  arrow.style.transform = open ? 'rotate(0deg)' : 'rotate(-90deg)';
+}
+</script>
