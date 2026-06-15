@@ -13,6 +13,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,400&family=Syne:wght@400;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="ss-ds.css">
 <style>
 :root{
   --g:#C9A84C;--gl:#F0D78A;--gd:#6B4F0A;
@@ -88,6 +89,23 @@ nav{position:fixed;top:0;left:0;right:0;z-index:500;padding:1.2rem 2.5rem;displa
 .prod-card.wide{grid-column:1/-1;}
 @media(max-width:700px){.prod-card.wide{grid-column:auto;}}
 
+/* ── FLYWHEEL ── */
+.flywheel{padding:5rem 2.5rem;border-top:1px solid rgba(255,255,255,.05);position:relative;overflow:hidden;}
+.flywheel::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 70% 60% at 70% 30%,rgba(201,168,76,.05),transparent);}
+.fw-inner{max-width:1200px;margin:0 auto;position:relative;}
+.fw-lead{font-size:.9rem;color:rgba(248,244,238,.55);line-height:1.9;max-width:620px;margin-bottom:3rem;}
+.fw-lead strong{color:var(--gl);}
+.fw-flow{display:flex;align-items:stretch;gap:.7rem;flex-wrap:wrap;}
+.fw-step{flex:1;min-width:180px;background:var(--bg2);border:1px solid rgba(201,168,76,.12);border-radius:var(--r);padding:1.4rem 1.3rem;position:relative;transition:all .4s;}
+.fw-step:hover{border-color:rgba(201,168,76,.35);transform:translateY(-4px);box-shadow:0 18px 40px rgba(0,0,0,.45);}
+.fw-n{font-family:'Syne',sans-serif;font-size:1.5rem;font-weight:800;color:rgba(201,168,76,.3);line-height:1;margin-bottom:.7rem;}
+.fw-t{font-family:'Playfair Display',serif;font-size:1.02rem;color:var(--gl);font-weight:700;line-height:1.25;margin-bottom:.5rem;}
+.fw-d{font-size:.72rem;color:rgba(248,244,238,.45);line-height:1.6;}
+.fw-arr{display:flex;align-items:center;justify-content:center;color:rgba(201,168,76,.45);font-size:1.3rem;flex-shrink:0;}
+.fw-loop{color:var(--g);font-size:1.6rem;}
+.fw-foot{margin-top:1.8rem;font-size:.8rem;color:rgba(201,168,76,.6);font-style:italic;font-family:'Playfair Display',serif;}
+@media(max-width:760px){.fw-flow{flex-direction:column;}.fw-arr{transform:rotate(90deg);padding:.2rem 0;}}
+
 /* ── CHI SIAMO ── */
 .about{padding:5rem 2.5rem;border-top:1px solid rgba(255,255,255,.05);}
 .about-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:start;}
@@ -148,7 +166,7 @@ footer{padding:2.5rem 2.5rem;border-top:1px solid rgba(255,255,255,.05);}
 <!-- PRODOTTI -->
 <section class="prodotti" id="prodotti">
   <div class="sec-label">L'ecosistema</div>
-  <h2 class="sec-h2">Quattro prodotti,<br><em>un solo ecosistema.</em></h2>
+  <h2 class="sec-h2">Sei tasselli,<br><em>un solo ecosistema.</em></h2>
 
   <div class="prod-grid">
 
@@ -172,6 +190,32 @@ footer{padding:2.5rem 2.5rem;border-top:1px solid rgba(255,255,255,.05);}
       <p class="prod-desc">Il gestionale SaaS per bar, locali e strutture ricettive. <strong>Metodo Bar Pro</strong> e <strong>Metodo Hotel Pro</strong> con agenti AI integrati: turni, inventario, HACCP, eventi, recensioni, bandi.</p>
       <div class="prod-footer">
         <div class="prod-status"><span class="prod-dot"></span>Attivo</div>
+        <div class="prod-arrow">↗</div>
+      </div>
+    </a>
+
+    <!-- SERVIZI BANDI / FINANZA -->
+    <a href="#flywheel" class="prod-card primary">
+      <div class="prod-badge badge-gold">Servizio · Finanza agevolata</div>
+      <div class="prod-ico">📑</div>
+      <div class="prod-name">Pratiche Bandi</div>
+      <p class="prod-desc">Dalla scoperta del bando alla domanda presentata. Un consulente AI che <strong>smonta qualsiasi bando</strong>, verifica l'ammissibilità e compila la pratica completa: business plan, bilancio previsionale, forecast. Il braccio operativo di BA.IA.</p>
+      <div class="prod-footer">
+        <div class="prod-status"><span class="prod-dot"></span>Attivo</div>
+        <div class="prod-arrow">↗</div>
+      </div>
+    </a>
+
+    <!-- SSFORMAZIONE -->
+    <a href="#flywheel" class="prod-card secondary">
+      <div class="prod-badge badge-indigo">E-learning · Sicurezza HoReCa</div>
+      <div class="prod-ico">🎓</div>
+      <div class="prod-name">SSFormazione</div>
+      <p class="prod-desc">Corsi di sicurezza sul lavoro (D.Lgs. 81/08) <strong>già adattati al mondo dell'ospitalità</strong> — cucina, sala, bar, hotel. Lezioni, quiz, video con avatar AI. Per lavoratori, manager e titolari. Finanziabili con i bandi.</p>
+      <div class="prod-footer">
+        <div class="prod-status" style="color:rgba(248,244,238,.3);">
+          <span style="width:5px;height:5px;border-radius:50%;background:rgba(248,244,238,.3);display:inline-block;"></span>In sviluppo
+        </div>
         <div class="prod-arrow">↗</div>
       </div>
     </a>
@@ -205,6 +249,29 @@ footer{padding:2.5rem 2.5rem;border-top:1px solid rgba(255,255,255,.05);}
   </div>
 </section>
 
+<!-- FLYWHEEL -->
+<section class="flywheel" id="flywheel">
+  <div class="fw-inner">
+    <div class="sec-label">Come si tengono insieme</div>
+    <h2 class="sec-h2">Non prodotti separati.<br><em>Un volano.</em></h2>
+    <p class="fw-lead">Il cliente è sempre lo stesso — il ristoratore, l'albergatore. Ogni prodotto crea il bisogno del successivo, e i fondi pubblici alimentano tutto il ciclo. Questo è il vantaggio che nessun competitor tech può copiare: <strong>15 anni dentro il mestiere</strong>.</p>
+
+    <div class="fw-flow">
+      <div class="fw-step"><div class="fw-n">01</div><div class="fw-t">BA.IA trova il bando</div><div class="fw-d">La piattaforma AI individua i bandi giusti per il locale.</div></div>
+      <div class="fw-arr">→</div>
+      <div class="fw-step"><div class="fw-n">02</div><div class="fw-t">Gli agenti compilano la pratica</div><div class="fw-d">Business plan, previsionale, domanda completa. Pronta a vincere.</div></div>
+      <div class="fw-arr">→</div>
+      <div class="fw-step"><div class="fw-n">03</div><div class="fw-t">Il bando finanzia la formazione</div><div class="fw-d">SSFormazione forma il personale con fondi pubblici.</div></div>
+      <div class="fw-arr">→</div>
+      <div class="fw-step"><div class="fw-n">04</div><div class="fw-t">BAD360 gestisce il locale</div><div class="fw-d">Turni, food cost, HACCP, menu, staff. Tutto in una suite.</div></div>
+      <div class="fw-arr">→</div>
+      <div class="fw-step"><div class="fw-n">05</div><div class="fw-t">BarmanMatch trova lo staff</div><div class="fw-d">Il personale giusto al momento giusto. Il locale cresce.</div></div>
+      <div class="fw-arr fw-loop">↺</div>
+    </div>
+    <p class="fw-foot">…e il locale che cresce ha bisogno del prossimo bando. Il volano gira.</p>
+  </div>
+</section>
+
 <!-- CHI SIAMO -->
 <section class="about" id="about">
   <div class="about-inner">
@@ -217,10 +284,10 @@ footer{padding:2.5rem 2.5rem;border-top:1px solid rgba(255,255,255,.05);}
     </div>
     <div>
       <div class="stats-grid">
-        <div class="stat"><div class="stat-n">6+</div><div class="stat-l">Anni HoReCa</div></div>
-        <div class="stat"><div class="stat-n">4</div><div class="stat-l">Prodotti attivi</div></div>
+        <div class="stat"><div class="stat-n">15+</div><div class="stat-l">Anni HoReCa</div></div>
+        <div class="stat"><div class="stat-n">6</div><div class="stat-l">Prodotti & servizi</div></div>
         <div class="stat"><div class="stat-n">330k</div><div class="stat-l">Esercizi target</div></div>
-        <div class="stat"><div class="stat-n">AI</div><div class="stat-l">First approach</div></div>
+        <div class="stat"><div class="stat-n">11</div><div class="stat-l">Agenti AI in BAD360</div></div>
       </div>
     </div>
   </div>
@@ -270,7 +337,7 @@ document.querySelectorAll('a[href^="#"]').forEach(a=>{
 const obs=new IntersectionObserver(entries=>{
   entries.forEach(e=>{if(e.isIntersecting){e.target.style.opacity='1';e.target.style.transform='translateY(0)';}});
 },{threshold:.1});
-document.querySelectorAll('.prod-card,.stat,.about-left,.about-left + div').forEach(el=>{
+document.querySelectorAll('.prod-card,.stat,.about-left,.about-left + div,.fw-step').forEach(el=>{
   el.style.opacity='0';el.style.transform='translateY(28px)';el.style.transition='opacity .7s ease,transform .7s ease';
   obs.observe(el);
 });

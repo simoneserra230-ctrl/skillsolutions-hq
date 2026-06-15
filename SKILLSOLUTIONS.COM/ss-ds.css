@@ -1,0 +1,83 @@
+/* ════════════════════════════════════════════════════════════════════
+   ss-ds.css — Skills Solutions Design System (token canonici condivisi)
+   Includi in qualsiasi pagina dell'ecosistema:
+     <link rel="stylesheet" href="../SKILLSOLUTIONS.COM/ss-ds.css">
+   Fonte di verità di colori, tipografia, spaziature e utility del brand.
+   ════════════════════════════════════════════════════════════════════ */
+
+:root{
+  /* ── Brand gold ── */
+  --g:#C9A84C;      /* oro primario — accento di tutto l'ecosistema */
+  --gl:#F0D78A;     /* oro chiaro — hover, highlight */
+  --gd:#6B4F0A;     /* oro scuro — gradienti, ombre */
+
+  /* ── Accenti prodotto (differenziano i brand) ── */
+  --baia:#6366F1;   /* BA.IA — indigo */
+  --bads:#00E5B4;   /* BAD.S — teal */
+  --muted:rgba(248,244,238,.4);
+
+  /* ── Superfici ── */
+  --bg:#06060A;     /* sfondo principale */
+  --bg2:#0D0B08;    /* card, pannelli */
+  --bg3:#131008;    /* sotto-superfici */
+  --w:#F8F4EE;      /* testo principale */
+  --gr:#666;        /* testo muto */
+  --line:rgba(255,255,255,.06);
+  --line-g:rgba(201,168,76,.18);
+
+  /* ── Stato semantico ── */
+  --ok:#64FF82; --warn:#d4803a; --err:#c94a4a;
+
+  /* ── Forma ── */
+  --r:12px; --rpill:999px;
+
+  /* ── Tipografia ── */
+  --serif:'Playfair Display',Georgia,serif;   /* hero, nomi prodotto */
+  --heading:'Syne',sans-serif;                /* numeri KPI, heading tecnici */
+  --font:'DM Sans',system-ui,sans-serif;      /* corpo, UI */
+}
+
+/* ── Reset minimo (non sovrascrivere se la pagina ne ha già uno) ── */
+.ss-scope *{margin:0;padding:0;box-sizing:border-box}
+
+/* ── Utility tipografiche ── */
+.ss-serif{font-family:var(--serif)}
+.ss-heading{font-family:var(--heading)}
+.ss-eyebrow{font-size:.52rem;letter-spacing:.4em;text-transform:uppercase;color:var(--g)}
+.ss-gold{color:var(--g)}
+.ss-gold-grad{background:linear-gradient(135deg,var(--gl),var(--g));
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+
+/* ── Bottoni ── */
+.ss-btn-g{display:inline-flex;align-items:center;gap:.5rem;padding:.9rem 2rem;
+  background:var(--g);color:#000;font-family:var(--font);font-size:.68rem;font-weight:700;
+  letter-spacing:.18em;text-transform:uppercase;text-decoration:none;border:none;
+  border-radius:var(--rpill);cursor:pointer;transition:background .3s}
+.ss-btn-g:hover{background:var(--gl)}
+.ss-btn-o{display:inline-flex;align-items:center;gap:.5rem;padding:.9rem 2rem;
+  border:1px solid var(--line-g);color:var(--g);font-family:var(--font);font-size:.68rem;
+  letter-spacing:.18em;text-transform:uppercase;text-decoration:none;
+  border-radius:var(--rpill);cursor:pointer;transition:all .3s}
+.ss-btn-o:hover{background:rgba(201,168,76,.08)}
+
+/* ── Card ── */
+.ss-card{background:var(--bg2);border:1px solid var(--line);border-radius:var(--r);
+  padding:2rem;transition:transform .4s,box-shadow .4s}
+.ss-card:hover{transform:translateY(-5px);box-shadow:0 24px 50px rgba(0,0,0,.5)}
+
+/* ── Badge ── */
+.ss-badge{font-size:.44rem;letter-spacing:.3em;text-transform:uppercase;
+  padding:.22rem .75rem;border-radius:var(--rpill);width:fit-content}
+.ss-badge--gold{background:rgba(201,168,76,.12);color:var(--g);border:1px solid var(--line-g)}
+.ss-badge--indigo{background:rgba(99,102,241,.12);color:#818CF8;border:1px solid rgba(99,102,241,.2)}
+.ss-badge--teal{background:rgba(0,229,180,.1);color:#00E5B4;border:1px solid rgba(0,229,180,.2)}
+.ss-badge--muted{background:rgba(255,255,255,.04);color:var(--muted);border:1px solid var(--line)}
+
+/* ── Status dot ── */
+.ss-dot{width:5px;height:5px;border-radius:50%;background:var(--ok);
+  display:inline-block;animation:ss-pulse 1.5s infinite}
+@keyframes ss-pulse{0%,100%{opacity:1}50%{opacity:.3}}
+
+/* ── Reveal on scroll (usa con JS IntersectionObserver) ── */
+.ss-reveal{opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s ease}
+.ss-reveal.ss-in{opacity:1;transform:none}
