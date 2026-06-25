@@ -1,16 +1,24 @@
 /**
  * ss-nav.js — Skills Solutions shared ecosystem topbar
- * Include in any product page: <script src="../SKILLSOLUTIONS.COM/ss-nav.js"></script>
- * Then call: SSNav.init({ current: 'bad360' })
+ * Include in any product page:
+ *   pagine a profondità 1 (es. BAD360.SKILLSOLUTIONS.COM/index.html):
+ *     <script src="../SKILLSOLUTIONS.COM/ss-nav.js"></script>
+ *     SSNav.init({ current: 'bad360' })                  // base default '../'
+ *   pagine più profonde (es. BAD.SKILLSOLUTIONS.COM/consultancy/index.html):
+ *     <script src="../../SKILLSOLUTIONS.COM/ss-nav.js"></script>
+ *     SSNav.init({ current: 'bads', base: '../../' })
  * current values: 'skillsolutions' | 'bad360' | 'baia' | 'bads' | 'barmanmatch'
+ * NB: i link sono RELATIVI alla cartella locale unificata. In produzione
+ *     (sottodomini separati) andranno sostituiti con URL assoluti (vedi opts.urls).
  */
 (function(){
+  // path RELATIVI alla radice PROGETTO (senza '../'): il prefisso lo mette init() via base
   const PRODUCTS = [
-    { id:'skillsolutions', label:'✦ Hub',       url:'../SKILLSOLUTIONS.COM/index.html',         color:'#C9A84C' },
-    { id:'baia',           label:'BA.IA',        url:'../BA.IA.SKILLSOLUTIONS.COM/index.html',   color:'#6366F1' },
-    { id:'bad360',         label:'BAD360',       url:'../BAD360.SKILLSOLUTIONS.COM/index.html',  color:'#C9A84C' },
-    { id:'bads',           label:'BAD.S',        url:'../BAD.SKILLSOLUTIONS.COM/index.html',     color:'#00E5B4' },
-    { id:'barmanmatch',    label:'BarmanMatch',  url:'../BARMANMATCH.SKILLSOLUTIONS.COM/barman_network.html', color:'rgba(248,244,238,.4)' },
+    { id:'skillsolutions', label:'✦ Hub',       path:'SKILLSOLUTIONS.COM/index.html',         color:'#C9A84C' },
+    { id:'baia',           label:'BA.IA',        path:'BA.IA.SKILLSOLUTIONS.COM/index.html',   color:'#6366F1' },
+    { id:'bad360',         label:'BAD360',       path:'BAD360.SKILLSOLUTIONS.COM/index.html',  color:'#C9A84C' },
+    { id:'bads',           label:'BAD.S',        path:'BAD.SKILLSOLUTIONS.COM/index.html',     color:'#00E5B4' },
+    { id:'barmanmatch',    label:'BarmanMatch',  path:'BARMANMATCH.SKILLSOLUTIONS.COM/barman_network.html', color:'rgba(248,244,238,.4)' },
   ];
 
   const CSS = `
@@ -33,6 +41,8 @@
     init: function(opts){
       opts = opts || {};
       const current = opts.current || '';
+      const base = opts.base || '../';                 // prefisso relativo (profondità pagina)
+      const urls = opts.urls || null;                  // override: { id: 'https://...' } per PROD
 
       const style = document.createElement('style');
       style.textContent = CSS;
@@ -48,7 +58,7 @@
 
       PRODUCTS.forEach(function(p){
         const a = document.createElement('a');
-        a.href = p.url;
+        a.href = (urls && urls[p.id]) ? urls[p.id] : (base + p.path);
         a.className = 'ss-nav-item' + (p.id === current ? ' active' : '');
         a.textContent = p.label;
         if(p.id === current){ a.style.color = p.color; a.style.borderColor = p.color; }
