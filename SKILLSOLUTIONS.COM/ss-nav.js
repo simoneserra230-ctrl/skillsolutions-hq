@@ -18,7 +18,7 @@
     { id:'baia',           label:'BA.IA',        path:'BA.IA.SKILLSOLUTIONS.COM/index.html',   color:'#6366F1' },
     { id:'bad360',         label:'BAD360',       path:'BAD360.SKILLSOLUTIONS.COM/index.html',  color:'#C9A84C' },
     { id:'bads',           label:'BAD.S',        path:'BAD.SKILLSOLUTIONS.COM/index.html',     color:'#00E5B4' },
-    { id:'barmanmatch',    label:'BarmanMatch',  path:'BARMANMATCH.SKILLSOLUTIONS.COM/barman_network.html', color:'rgba(248,244,238,.4)' },
+    { id:'barmanmatch',    label:'BarmanMatch',  path:'BARMANMATCH.SKILLSOLUTIONS.COM/BARMANMATCH.SKILLSOLUTIONS.COM.html', color:'rgba(248,244,238,.4)' },
   ];
 
   const CSS = `
