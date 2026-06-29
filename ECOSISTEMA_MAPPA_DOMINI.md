@@ -1,8 +1,9 @@
-# 🌐 Ecosistema SkillSolutions — Mappa Prodotti → Domini (DA COMPILARE)
+# 🌐 Ecosistema SkillSolutions — Mappa Prodotti → Domini
 
-> Compila la colonna **DOMINIO REALE** dopo l'acquisto dei domini, poi passamelo:
-> aggiorno `ss-nav.js` (barra ecosistema) e tutti i cross-link con gli URL assoluti
-> di produzione. Finché è vuoto, i link restano **relativi** (funzionano solo in locale).
+> Stato acquisti (giu 2026): **BAD = `www.barmanadomiciliosardegna.com` ✅ ACQUISTATO**.
+> Gli altri 4 (Hub, BA.IA, BAD360, BarmanMatch) sono **ancora da comprare**.
+> Appena arrivano, aggiorno `ss-nav.js` (barra ecosistema) e i cross-link con gli URL
+> assoluti di produzione. Finché mancano, quei link restano **relativi** (solo locale).
 
 ## Albero (stato attuale dei collegamenti)
 
@@ -40,25 +41,25 @@ SKILLSOLUTIONS.COM  ◀── RADICE / HUB
 
 | Prodotto | Cartella locale | DOMINIO REALE (compila) |
 |---|---|---|
-| Hub | SKILLSOLUTIONS.COM | https://__________________________ |
-| BA.IA | BA.IA.SKILLSOLUTIONS.COM | https://__________________________ |
-| BAD360 | BAD360.SKILLSOLUTIONS.COM | https://__________________________ |
-| BAD.S (Events) | BAD.SKILLSOLUTIONS.COM | https://__________________________ |
-| BAD Consultancy | …/BAD.SKILLSOLUTIONS.COM/consultancy/ | https://__________/consultancy/ (o sottodominio?) |
-| BarmanMatch (landing) | BARMANMATCH.SKILLSOLUTIONS.COM | https://__________________________ |
-| BarmanMatch (app) | …/BARMANMATCH_APP/frontend/app.html | https://__________________________ |
-| SSFormazione | (da realizzare) | https://__________________________ |
+| Hub | SKILLSOLUTIONS.COM | ⛔ da comprare |
+| BA.IA | BA.IA.SKILLSOLUTIONS.COM | ⛔ da comprare |
+| BAD360 | BAD360.SKILLSOLUTIONS.COM | ⛔ da comprare |
+| **BAD.S (Events)** | BAD.SKILLSOLUTIONS.COM | **https://www.barmanadomiciliosardegna.com ✅ ACQUISTATO** |
+| BAD Consultancy | …/BAD.SKILLSOLUTIONS.COM/consultancy/ | https://www.barmanadomiciliosardegna.com/consultancy/ (stesso dominio) |
+| BarmanMatch (landing) | BARMANMATCH.SKILLSOLUTIONS.COM/index.html | ⛔ da comprare |
+| BarmanMatch (app) | …/BARMANMATCH_APP/frontend/app.html | ⛔ da comprare |
+| SSFormazione | (da realizzare) | ⛔ da comprare |
 
 ## Blocco pronto per `ss-nav.js` (lo compilo io con i tuoi domini)
 
 ```js
 // Da passare a SSNav.init({ current:'…', urls: SS_URLS })
 const SS_URLS = {
-  skillsolutions: 'https://__________________',   // Hub
-  baia:           'https://__________________',
-  bad360:         'https://__________________',
-  bads:           'https://__________________',   // BAD.S
-  barmanmatch:    'https://__________________',   // → landing BarmanMatch
+  skillsolutions: 'https://__________________',   // Hub — da comprare
+  baia:           'https://__________________',   // da comprare
+  bad360:         'https://__________________',   // da comprare
+  bads:           'https://www.barmanadomiciliosardegna.com',   // ✅ BAD.S — acquistato
+  barmanmatch:    'https://__________________',   // → landing BarmanMatch — da comprare
 };
 ```
 
