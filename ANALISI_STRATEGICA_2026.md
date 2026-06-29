@@ -5,7 +5,7 @@
 
 ## 1. LA MAPPA
 
-### Anima A — Lavoro Ambiente Impresa (genera reddito oggi)
+### Anima A — Lavoro commissionato / dipendente (genera reddito oggi)
 - CORSI FORMAZIONE ELEARNING (macchina corsi e-learning, repo `formazione`) —
   **progetto COMMISSIONATO: verrà consegnato al committente e rimosso da questa
   cartella a fine lavoro.** Fino ad allora è l'upstream di SSFormazione: ogni
@@ -50,7 +50,7 @@ clienti con fondi pubblici. Questo è il vantaggio competitivo non copiabile.
    vero. Tutte le ipotesi (prezzo, bisogno, canale) sono non testate.
 3. **Bus factor = 1**: tutto dipende da Simone + Claude. Nessun collaboratore,
    nessuna documentazione di processo per terzi.
-4. **Confine IP Ambiente Impresa ↔ personale non formalizzato**: la KB Formazione
+4. **Confine IP committente ↔ personale non formalizzato**: la KB Formazione
    nasce da documenti del datore di lavoro; SSFormazione deve avere contenuti
    propri prima di vendere. Rischio contestazione.
 5. **Tempo frazionato**: il lavoro dipendente assorbe le ore migliori; i progetti

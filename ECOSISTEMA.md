@@ -65,7 +65,7 @@ alimentano tutto l'ecosistema.
 - **Nido Agenti** — pool centralizzato agenti AI, `_WORKSPACE/_AGENTI_AI/`
 
 ### Progetti commissionati (NON ecosistema — in uscita)
-- **CORSI FORMAZIONE ELEARNING** (`formazione`) — commissionato da Ambiente Impresa,
+- **CORSI FORMAZIONE ELEARNING** (`formazione`) — commissionato da un committente esterno,
   verrà consegnato e rimosso. È l'upstream di SSFormazione (sync prima della consegna).
   ⚠️ La chiave API "non pagata" riguarda SOLO questo progetto.
 

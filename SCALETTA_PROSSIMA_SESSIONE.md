@@ -8,7 +8,7 @@
 ## ✅ Fatto in questa sessione (tutto committato + testato)
 - **BarmanMatch**: entitlement (venue paga/worker gratis/admin bypass), **fix auth ES256/JWKS**, anti-disintermediazione + chat + KYC, file deploy (non pubblicati). 59 test verdi.
 - **DAPC2 consolidato**: Email Generator→BA.IA (`/ai/email/outreach`); agenti finanza (merge engine in `_WORKSPACE/_AGENTI_AI/Nido Agenti`, backup zip); corso-gen cherry-pick→SSFormazione.
-- **Branding/email**: "Ambiente Impresa" rimosso ovunque tranne CV. Email: `simoneserra230@gmail.com` default; `barmanadomiciliosardegna@gmail.com` per BAD bar/catering.
+- **Branding/email**: brand del committente rimosso ovunque (resta solo nella CV). Email: `simoneserra230@gmail.com` default; `barmanadomiciliosardegna@gmail.com` per BAD bar/catering.
 - **Redeploy prep** BA.IA + BAD360 (REDEPLOY.md, non pubblicato).
 - **SSFormazione**: config normativa + regole redazione tessute nel CLAUDE_PROJECT.
 - **BAD360 Certificazioni**: modulo rifatto reale multi-tenant (3 aree, 15/15 test).
