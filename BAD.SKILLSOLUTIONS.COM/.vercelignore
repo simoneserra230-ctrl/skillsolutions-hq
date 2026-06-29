@@ -1,0 +1,5 @@
+# Non pubblicare sul sito: sorgenti contenuti e cartelle placeholder vuote
+*.docx
+ECOMMERCE/
+FORMAZIONE/
+SOFTWARE/
