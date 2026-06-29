@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BA.IA — Analisi Bandi con AI · Skills Solutions</title>
+<meta name="description" content="BA.IA: la piattaforma AI che analizza il tuo profilo aziendale e trova i bandi statali, regionali e PNRR più adatti. Match automatico, guida alla presentazione.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,400&family=Syne:wght@400;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{--ind:#6366F1;--inl:#818CF8;--bg:#07070E;--bg2:#0C0C18;--w:#F0F0FF;--r:12px;--rpill:999px;}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{background:var(--bg);color:var(--w);font-family:'DM Sans',sans-serif;overflow-x:hidden;-webkit-font-smoothing:antialiased;}
+
+nav{position:fixed;top:0;left:0;right:0;z-index:500;padding:1.2rem 2.5rem;display:flex;justify-content:space-between;align-items:center;background:rgba(7,7,14,.9);backdrop-filter:blur(20px);border-bottom:1px solid rgba(99,102,241,.1);}
+.nav-brand{display:flex;align-items:center;gap:.6rem;text-decoration:none;}
+.nav-logo{font-family:'Syne',sans-serif;font-size:1.2rem;font-weight:800;color:var(--inl);}
+.nav-sub{font-size:.48rem;letter-spacing:.28em;color:rgba(129,140,248,.35);text-transform:uppercase;}
+.nav-cta{padding:.5rem 1.3rem;background:var(--ind);color:#fff;font-size:.58rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;text-decoration:none;border-radius:var(--rpill);transition:background .3s;}
+.nav-cta:hover{background:var(--inl);}
+
+.hero{min-height:100dvh;display:grid;place-items:center;text-align:center;padding:8rem 2.5rem 4rem;position:relative;overflow:hidden;}
+.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 70% 55% at 50% 25%,rgba(99,102,241,.1),transparent);}
+.hero::after{content:'';position:absolute;top:20%;left:50%;transform:translate(-50%,-50%);width:400px;height:400px;background:radial-gradient(circle,rgba(99,102,241,.06),transparent);border-radius:50%;pointer-events:none;}
+.hero-badge{display:inline-flex;align-items:center;gap:.5rem;font-size:.5rem;letter-spacing:.35em;text-transform:uppercase;color:rgba(129,140,248,.7);border:1px solid rgba(99,102,241,.2);padding:.4rem 1rem;border-radius:var(--rpill);margin-bottom:2rem;}
+.dot-live{width:6px;height:6px;border-radius:50%;background:#6EE7B7;animation:blink 1.5s infinite;}
+@keyframes blink{0%,100%{opacity:1;}50%{opacity:.2;}}
+.hero h1{font-family:'Playfair Display',serif;font-size:clamp(3rem,9vw,7rem);font-weight:900;line-height:.92;margin-bottom:1.8rem;}
+.hero h1 em{font-style:italic;background:linear-gradient(135deg,#A5B4FC,var(--ind));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+.hero-desc{font-size:.9rem;color:rgba(240,240,255,.45);max-width:480px;line-height:1.9;margin:0 auto 2.5rem;}
+.hero-btns{display:flex;gap:.8rem;justify-content:center;flex-wrap:wrap;}
+.btn-i{display:inline-flex;align-items:center;gap:.5rem;padding:.95rem 2.2rem;background:var(--ind);color:#fff;font-size:.68rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;text-decoration:none;border-radius:var(--rpill);transition:all .3s;}
+.btn-i:hover{background:var(--inl);transform:translateY(-2px);}
+.btn-o{display:inline-flex;align-items:center;gap:.5rem;padding:.95rem 2.2rem;border:1px solid rgba(99,102,241,.3);color:var(--inl);font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;text-decoration:none;border-radius:var(--rpill);transition:all .3s;}
+.btn-o:hover{background:rgba(99,102,241,.07);}
+
+.how{padding:5rem 2.5rem;max-width:1000px;margin:0 auto;}
+.sec-label{font-size:.5rem;letter-spacing:.38em;color:var(--inl);text-transform:uppercase;margin-bottom:.7rem;display:flex;align-items:center;gap:.5rem;}
+.sec-label::before{content:'◆';font-size:.4rem;}
+.sec-h2{font-family:'Playfair Display',serif;font-size:clamp(2rem,5vw,3.5rem);font-weight:700;margin-bottom:3rem;}
+.sec-h2 em{font-style:italic;color:var(--inl);}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;}
+@media(max-width:700px){.steps{grid-template-columns:1fr;gap:1rem;}}
+.step{background:var(--bg2);border:1px solid rgba(99,102,241,.12);border-radius:var(--r);padding:2rem;position:relative;overflow:hidden;transition:all .4s;}
+.step::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--ind),var(--inl));transform:scaleX(0);transform-origin:left;transition:transform .5s;}
+.step:hover::before{transform:scaleX(1);}
+.step:hover{transform:translateY(-4px);}
+.step-n{font-family:'Syne',sans-serif;font-size:3rem;font-weight:800;color:rgba(99,102,241,.15);line-height:1;margin-bottom:.6rem;}
+.step-t{font-size:.9rem;font-weight:600;color:var(--inl);margin-bottom:.5rem;}
+.step-d{font-size:.78rem;color:rgba(240,240,255,.4);line-height:1.8;}
+
+.features{padding:4rem 2.5rem;border-top:1px solid rgba(255,255,255,.04);}
+.feat-inner{max-width:1000px;margin:0 auto;}
+.feat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem;margin-top:2.5rem;}
+@media(max-width:700px){.feat-grid{grid-template-columns:1fr 1fr;}}
+.feat{padding:1.6rem;background:rgba(99,102,241,.04);border:1px solid rgba(99,102,241,.1);border-radius:var(--r);transition:border-color .3s;}
+.feat:hover{border-color:rgba(99,102,241,.25);}
+.feat-icon{font-size:1.3rem;margin-bottom:.7rem;}
+.feat-t{font-size:.78rem;font-weight:500;margin-bottom:.25rem;}
+.feat-d{font-size:.7rem;color:rgba(240,240,255,.35);line-height:1.7;}
+
+.cta-band{padding:5rem 2.5rem;text-align:center;}
+.cta-band h2{font-family:'Playfair Display',serif;font-size:clamp(1.8rem,5vw,3.2rem);font-weight:700;margin-bottom:1rem;}
+.cta-band h2 em{font-style:italic;color:var(--inl);}
+.cta-band p{font-size:.85rem;color:rgba(240,240,255,.4);margin-bottom:2.5rem;}
+
+/* photo layer (good-vibes) */
+.hero-bg{position:absolute;inset:0;z-index:0;background-size:cover;background-position:center;opacity:.20;}
+.hero-bg::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(7,7,14,.55) 0%,rgba(7,7,14,.80) 60%,var(--bg) 100%);}
+.hero>div{position:relative;z-index:1;}
+
+footer{padding:2rem 2.5rem;border-top:1px solid rgba(255,255,255,.04);}
+.foot-in{max-width:1000px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;}
+.foot-brand{font-family:'Syne',sans-serif;font-size:.85rem;color:rgba(129,140,248,.4);}
+.foot-eco{display:flex;gap:1.5rem;flex-wrap:wrap;}
+.foot-eco a{font-size:.52rem;letter-spacing:.15em;text-transform:uppercase;color:rgba(240,240,255,.2);text-decoration:none;transition:color .3s;}
+.foot-eco a:hover{color:var(--inl);}
+.foot-copy{font-size:.5rem;color:rgba(240,240,255,.12);width:100%;}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-brand">
+    <div>
+      <div class="nav-logo">BA.IA</div>
+      <div class="nav-sub">Bandi AI · Skills Solutions</div>
+    </div>
+  </a>
+  <a href="BAIA_SAAS_B2C%20(OPEX)/frontend/index.html" class="nav-cta">Apri piattaforma →</a>
+</nav>
+
+<section class="hero">
+  <div class="hero-bg" style="background-image:url('https://images.unsplash.com/photo-1483728642387-6c3bdd6c93e5?auto=format&fit=crop&w=1920&q=90')"></div>
+  <div>
+    <div class="hero-badge"><span class="dot-live"></span>Piattaforma attiva · Italia</div>
+    <h1>I bandi giusti.<br><em>Trovati</em><br>dall'AI.</h1>
+    <p class="hero-desc">BA.IA analizza il profilo della tua azienda e individua automaticamente i bandi statali, regionali e PNRR più adatti. Stop alle ricerche manuali.</p>
+    <div class="hero-btns">
+      <a href="BAIA_SAAS_B2C%20(OPEX)/frontend/index.html" class="btn-i">Accedi a BA.IA →</a>
+      <a href="#come-funziona" class="btn-o">Come funziona ↓</a>
+    </div>
+  </div>
+</section>
+
+<section class="how" id="come-funziona">
+  <div class="sec-label">Processo</div>
+  <h2 class="sec-h2">Come funziona<br><em>BA.IA.</em></h2>
+  <div class="steps">
+    <div class="step">
+      <div class="step-n">01</div>
+      <div class="step-t">Profilo aziendale</div>
+      <p class="step-d">Inserisci i dati della tua azienda: settore, dimensione, fatturato, regione, obiettivi di investimento. Bastano pochi minuti.</p>
+    </div>
+    <div class="step">
+      <div class="step-n">02</div>
+      <div class="step-t">Match AI automatico</div>
+      <p class="step-d">L'algoritmo confronta il tuo profilo con il database completo di bandi attivi e scaduti. Score di compatibilità per ogni opportunità.</p>
+    </div>
+    <div class="step">
+      <div class="step-n">03</div>
+      <div class="step-t">Piano di azione</div>
+      <p class="step-d">Per ogni bando: scadenze, documenti richiesti, importi massimi e guida passo passo alla presentazione della domanda.</p>
+    </div>
+  </div>
+</section>
+
+<section class="features">
+  <div class="feat-inner">
+    <div class="sec-label">Funzionalità</div>
+    <h2 class="sec-h2" style="margin-bottom:.3rem;">Tutto quello che <em>conta.</em></h2>
+    <div class="feat-grid">
+      <div class="feat"><div class="feat-icon">🎯</div><div class="feat-t">Match Score</div><div class="feat-d">Punteggio di compatibilità bando/azienda su base 100</div></div>
+      <div class="feat"><div class="feat-icon">🔔</div><div class="feat-t">Alert scadenze</div><div class="feat-d">Notifiche automatiche per nuovi bandi e scadenze imminenti</div></div>
+      <div class="feat"><div class="feat-icon">📋</div><div class="feat-t">Checklist documenti</div><div class="feat-d">Lista completa dei documenti necessari per ogni bando</div></div>
+      <div class="feat"><div class="feat-icon">💶</div><div class="feat-t">PNRR & Nazionali</div><div class="feat-d">Copertura completa: fondi europei, nazionali e regionali</div></div>
+      <div class="feat"><div class="feat-icon">📈</div><div class="feat-t">Analisi storica</div><div class="feat-d">Storico bandi e tassi di successo per settore e tipologia</div></div>
+      <div class="feat"><div class="feat-icon">🏨</div><div class="feat-t">Verticale HoReCa</div><div class="feat-d">Specializzato su bandi per hospitality, ristorazione e turismo</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-band">
+  <h2>Inizia a trovare<br><em>finanziamenti.</em></h2>
+  <p>Accedi alla piattaforma o contattaci per una demo.</p>
+  <div class="hero-btns">
+    <a href="BAIA_SAAS_B2C%20(OPEX)/frontend/index.html" class="btn-i">Apri BA.IA →</a>
+    <a href="https://wa.me/393468473144?text=Ciao Simone! Vorrei saperne di più su BA.IA per i bandi." target="_blank" rel="noopener noreferrer" class="btn-o">💬 Richiedi demo</a>
+  </div>
+</section>
+
+<footer>
+  <div class="foot-in">
+    <div class="foot-brand">BA.IA · Skills Solutions</div>
+    <nav class="foot-eco">
+      <a href="../SKILLSOLUTIONS.COM/index.html">✦ Skills Solutions Hub</a>
+      <a href="../BAD360.SKILLSOLUTIONS.COM/index.html">BAD360 Gestionale</a>
+      <a href="../BAD.SKILLSOLUTIONS.COM/index.html">BAD.S Events</a>
+    </nav>
+    <div class="foot-copy">© 2025-2026 BA.IA · Skills Solutions · Simone Serra · Sardegna</div>
+  </div>
+</footer>
+<script src="../SKILLSOLUTIONS.COM/ss-nav.js"></script>
+<script>SSNav.init({current:'baia'});</script>
+</body>
+</html>

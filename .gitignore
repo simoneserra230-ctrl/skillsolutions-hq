@@ -1,6 +1,9 @@
 # ── REPO HQ: traccia SOLO strategia, agenti finanza, siti statici ──────────
 # I progetti applicativi hanno repo git propri — esclusi qui:
-BA.IA.SKILLSOLUTIONS.COM/
+# BA.IA: l'app (BAIA_SAAS_B2C) ha repo proprio + cartelle interne pesanti → ignorate;
+# tracciamo SOLO la landing marketing (front door dell'ecosistema, linkata dall'hub)
+BA.IA.SKILLSOLUTIONS.COM/*
+!BA.IA.SKILLSOLUTIONS.COM/index.html
 BAD360.SKILLSOLUTIONS.COM/
 BARMANMATCH.SKILLSOLUTIONS.COM/
 CORSI FORMAZIONE ELEARNING/
