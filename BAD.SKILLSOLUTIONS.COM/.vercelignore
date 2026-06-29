@@ -3,3 +3,6 @@
 ECOMMERCE/
 FORMAZIONE/
 SOFTWARE/
+
+# build tool (non pubblicare)
+_tools/
