@@ -64,6 +64,29 @@ AI che propone tariffe (stagionalità/occupazione/eventi locali). Richiede dati 
 
 > Guardrail invariato: 1-2 fronti alla volta. I più on-brand/fossato: **A (eventi/matrimoni) + B (beverage program)**. C (ESG) ha spinta normativa forte e si lega a BA.IA. Fonti: vedi sessione ricerca giu 2026.
 
+## 🛡️ Cluster COMPLIANCE — "simili a C" (ricerca avanzata #3, giu 2026)
+> Logica: **la legge OBBLIGA → domanda forzata e ricorrente.** È la stessa dinamica dell'HACCP.
+> L'AI gestisce l'onere (scadenze, report, pre-compilazione). Rule-based → espandibile senza expertise.
+> **Sinergia chiave d'ecosistema:** un gap di compliance → **BA.IA trova il bando per finanziarlo** →
+> **SSFormazione eroga la formazione obbligatoria** → BAD360 traccia scadenze/certificati. Flywheel reale.
+
+- **C — ESG/CSRD** (già a backlog): dati ESG certificati/audit dal 2026; incide su financing e ranking portali.
+- **C2 — Compliance Radar / Adempimenti ricettivi** 🔥: dato tipo+dimensione+regione della struttura, l'AI elenca
+  TUTTI gli obblighi + scadenze + checklist + pre-compila i report. Riuso: moduli **Certificazioni/scadenze**
+  + **Academy** già in BAD360. Copre: antincendio/CPI (adeguamento entro 31/12/2026, SCIA entro 31/12/2025,
+  controlli biennali >50 p.l.), **energia/acqua** (metering obbligatorio hotel >20 camere dal 2025),
+  **ISO 14001/EMAS** (hotel >50 camere dal 1/7/2025), **rinnovo formazione** antincendio/HACCP/privacy ogni 2-3 anni.
+- **C3 — CIN / Alloggiati Web / ISTAT / Imposta di soggiorno** 🔥 (il "grind" ricorrente di OGNI struttura IT):
+  CIN obbligatorio dal nov 2024 (sanzioni dal gen 2025; novità dal 20 mag 2026), BDSR, comunicazione alloggiati
+  alla Questura, ISTAT (Ross1000/Sinfonia/Turismo5), riscossione+rendicontazione imposta di soggiorno. AI che
+  automatizza registrazione ospiti + invii periodici. (Competitor tipo Chekin/Lodgify coprono SOLO la registrazione.)
+- **C4 — Accessibilità sito (European Accessibility Act)** 🔥: dal giu 2025 siti/booking devono essere WCAG 2.1 AA
+  (EN 301 549); sanzioni €60k-900k; "il prossimo GDPR"; esenti micro <10 dipendenti. AI che fa audit accessibilità del sito.
+- **C5 — GDPR ospiti + Whistleblowing** (D.Lgs 24/2023, ≥50 dip/Mod.231): privacy dati ospite + canale segnalazioni.
+
+> Top compliance da attaccare: **C2 (Compliance Radar)** = l'ombrello che li tiene insieme e si aggancia a BA.IA+SSFormazione;
+> **C3 (CIN/Alloggiati/soggiorno)** = il dolore ricorrente più sentito dal piccolo operatore sardo. Fonti: ricerca giu 2026.
+
 ## Guardrail
 1 fronte alla volta (bus factor 1). Partire da **(1) Guest Assistant + (2) Esperienze** = massima
 leva + è il flywheel che fa cassa. Tutto il resto demand-pull.
